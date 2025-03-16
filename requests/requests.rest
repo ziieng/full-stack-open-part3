@@ -1,0 +1,23 @@
+# Get all persons
+GET http://localhost:3001/api/persons
+
+###
+
+# Get single person by ID
+GET http://localhost:3001/api/persons/2
+
+###
+
+# Delete person by ID
+DELETE http://localhost:3001/api/persons/2
+
+###
+
+# Add a new person
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Jenny",
+  "number": "867-5309"
+}
