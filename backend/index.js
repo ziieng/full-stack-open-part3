@@ -34,6 +34,8 @@ morgan.token('post-body', function (req, res) {
 app.use(express.json())
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :post-body'))
 
+app.use(express.static('dist'))
+
 app.get('/api/persons', (request, response) => {
   response.json(persons)
 })
@@ -64,6 +66,7 @@ const generateId = () => {
 }
 
 app.post('/api/persons', (request, response) => {
+  console.log(request)
   const body = request.body
 
   if (!body.name) {
@@ -94,6 +97,13 @@ app.post('/api/persons', (request, response) => {
 
   response.json(person)
 })
+
+
+const unknownEndpoint = (request, response) => {
+  response.status(404).send({ error: 'unknown endpoint' })
+}
+
+app.use(unknownEndpoint)
 
 const PORT = 3001
 app.listen(PORT, () => {
