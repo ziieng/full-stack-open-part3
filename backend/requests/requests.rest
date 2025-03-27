@@ -4,12 +4,12 @@ GET http://localhost:3001/api/persons
 ###
 
 # Get single person by ID
-GET http://localhost:3001/api/persons/67e48247e371ae845149b1b4
+GET http://localhost:3001/api/persons/67e4965264d9957749e4a328
 
 ###
 
 # Delete person by ID
-DELETE http://localhost:3001/api/persons/2
+DELETE http://localhost:3001/api/persons/67e4965264d9957749e4a328
 
 ###
 
@@ -20,4 +20,16 @@ Content-Type: application/json
 {
   "name": "John Jacob Jingleheimer Schmidt",
   "number": "555-555-5555"
+}
+
+###
+
+# Update a person
+# Add a new person
+PUT http://localhost:3001/api/persons/67e4df2eb557dc24e2515c01
+Content-Type: application/json
+
+{
+  "name": "John Jacob Jingleheimer Schmidt",
+  "number": "222-222-2222"
 }
