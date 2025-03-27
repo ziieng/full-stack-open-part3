@@ -4,7 +4,7 @@ GET http://localhost:3001/api/persons
 ###
 
 # Get single person by ID
-GET http://localhost:3001/api/persons/2
+GET http://localhost:3001/api/persons/67e48247e371ae845149b1b4
 
 ###
 
@@ -18,6 +18,6 @@ POST http://localhost:3001/api/persons
 Content-Type: application/json
 
 {
-  "name": "Jenny",
-  "number": "867-5309"
+  "name": "John Jacob Jingleheimer Schmidt",
+  "number": "555-555-5555"
 }
