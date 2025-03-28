@@ -91,9 +91,9 @@ const App = () => {
         setTimeout(() => {
           setSuccessMessage(null)
         }, 5000)
-      }).catch(() => {
+      }).catch((error) => {
         setErrorMessage(
-          `Addition of ${personObject.name} failed; please try again`
+          error.response.data.error
         )
         setTimeout(() => {
           setErrorMessage(null)
